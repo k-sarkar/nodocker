@@ -1,4 +1,4 @@
-
 #!/bin/bash
+
 echo "Before calling run..."
 exec /usr/local/s2i/run
