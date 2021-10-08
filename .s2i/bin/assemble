@@ -1,4 +1,4 @@
-#!bin/sh
+#!/bin/sh
 
 echo "executing custom assemble script before running the parent assemble script"
 
