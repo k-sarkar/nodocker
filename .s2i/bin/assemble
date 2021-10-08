@@ -2,6 +2,12 @@
 
 echo "executing custom assemble script before running the parent assemble script"
 
+if [ -d /tmp/artifacts/.m2 ]; then
+  echo "---> Restoring maven artifacts..."
+  mv /tmp/artifacts/.m2 ${HOME}/
+fi
+
+
 /usr/local/s2i/assemble
 
 echo "executing custom assemble script after running the parent assemble script"
