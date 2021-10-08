@@ -1,7 +1,11 @@
 #!/bin/sh -e
+
+echo "executing custom save-artifacts script"
 # Stream the .m2 folder tar archive to stdout
 if [ -d ${HOME}/.m2 ]; then
   pushd ${HOME} > /dev/null
   tar cf - .m2
   popd > /dev/null
 fi
+
+/usr/local/s2i/save-artifacts
